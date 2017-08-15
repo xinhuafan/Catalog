@@ -1,0 +1,24 @@
+<div class="pos">
+  <h3>New Product:</h3>
+    <div class="left">
+        <label>Full Name:&nbsp;&nbsp;</label>
+        <br>
+        <label>Short Name:&nbsp;&nbsp;</label>
+        <br>
+        <label>Image URL:&nbsp;&nbsp;</label>
+        <br>
+        <label>Price:&nbsp;&nbsp;</label>
+        <br>
+    </div>
+    <div class="right">
+        <input type="text" ng-model="newproduct.fullName" placeholder="Full Name" size="50px">
+        <br>
+        <input type="text" ng-model="newproduct.shortName" placeholder="Short Name" size="50px">
+        <br>
+        <input type="text" ng-model="newproduct.imageUrl" placeholder="Image URL" size="50px">
+        <br>
+        <input type="text" ng-model="newproduct.price" placeholder="Price" size="50px">
+        <br><br>
+        <a href="#/" class="btnPos"><button ng-click="saveChanges()">&#10004; Save Changes</button></a>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="catalogue.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="ng-infinite-scroll.min.js"></script>
+</head>
+<body ng-app="catalogueApp">
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">CatalogPageView</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#/newProduct"><button><strong>New Product</strong></button></a></li>
+      <li><a href="#/editProduct/{{product.id}}"><button><strong>Edit Product</strong></button></a></li>
+      <li><a><button ng-click="deleteProduct(product.id)"><strong>Delete Product</strong></button></a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    <div class="well well-sm">
+        <li>
+        <strong>Display</strong>
+        <div class="btn-group">
+            <a href="#/" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list"></span>List</a> 
+            </button><a href="#/gridView" id="grid" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th"></span>Grid</a>
+        </div>
+        </li>
+    </div>
+    </ul>
+  </div>
+</nav>
+<div ng-view></div>
+<script src="catalogue.js"></script>
+</body>
+</html>
